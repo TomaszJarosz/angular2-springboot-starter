@@ -10,14 +10,18 @@ buildscript {
 	}
 }
 
+
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
 
+processResources{
+	exclude 'static'
+}
 
 war {
-	exclude('src/main/resources/static/**/**')
 	from('src/main/resources/static/dist')
 }
 
