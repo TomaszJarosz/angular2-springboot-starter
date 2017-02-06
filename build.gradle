@@ -6,7 +6,7 @@ task buildAll{
         }
         exec{
             workingDir '/src/main/resources/static'
-            commandLine = ['cmd', '/c', 'ng', 'build']
+            commandLine = ['cmd', '/c', 'ng', 'build', '--base-href', '/portfolio/']
         }
         exec{
             workingDir './'
