@@ -15,9 +15,10 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
 
-jar {
-	baseName = 'portfolio'
-	version = '0.0.1-SNAPSHOT'
+
+war {
+	exclude('src/main/resources/static/**/**')
+	from('src/main/resources/static/dist')
 }
 
 sourceCompatibility = 1.8
