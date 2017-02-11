@@ -1,14 +1,14 @@
-task buildAll{
-    doLast{
-        exec{
+task buildAll {
+    doLast {
+        exec {
             workingDir './'
             commandLine = ['cmd', '/c', 'gradle', 'clean']
         }
-        exec{
+        exec {
             workingDir '/src/main/resources/static'
             commandLine = ['cmd', '/c', 'ng', 'build', '--base-href', '/portfolio/']
         }
-        exec{
+        exec {
             workingDir './'
             commandLine = ['cmd', '/c', 'gradle', 'build']
         }
@@ -54,8 +54,14 @@ configurations {
 
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-web')
-    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+    compile(
+            'org.springframework.boot:spring-boot-starter-web',
+            'org.springframework.boot:spring-boot-starter-tomcat',
+            'org.springframework.boot:spring-boot-starter-data-jpa:1.5.1.RELEASE',
+            'mysql:mysql-connector-java',
+            'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+    )
+    /*providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")*/
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

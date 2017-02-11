@@ -1,4 +1,4 @@
-package pl.jarosz.tomasz.hello;
+package pl.jarosz.tomasz.main;
 
 /**
  * Created by Tomek on 04.02.2017.
