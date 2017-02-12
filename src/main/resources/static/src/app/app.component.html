@@ -1,2 +1,71 @@
-<alert type="success"><h1>{{title}}</h1></alert>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tomasz Jarosz</title>
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+<!-- Navigation -->
+<app-navbar></app-navbar>
+
+<!-- Header Carousel -->
+<app-carousel></app-carousel>
+
+<!-- Page Content -->
+<div class="container">
+
+  <!-- Marketing Icons Section -->
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">
+        Witam na mojej stronie!
+      </h1>
+    </div>
+    <app-articules></app-articules>
+  </div>
+  <!-- /.row -->
+
+  <!-- Portfolio Section -->
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="page-header">Portfolio Heading</h2>
+    </div>
+    <app-portfolio></app-portfolio>
+  </div>
+  <!-- /.row -->
+
+  <!-- Info Section -->
+  <app-info-section></app-info-section>
+  <!-- /.row -->
+
+  <hr>
+
+  <!-- Call to Action Section -->
+  <app-call-to-action></app-call-to-action>
+
+  <hr>
+
+  <!-- Footer -->
+  <app-footer></app-footer>
+
+</div>
+<!-- /.container -->
+
+</body>
+</html>
